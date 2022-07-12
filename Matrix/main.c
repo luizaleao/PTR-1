@@ -1,8 +1,6 @@
 /*
-	main.c: Matrix test program
-	author: Andre Cavalcante
-	date: may, 2022
-	license: CC BY-SA
+	Created on: 29 de jun. de 2022
+ *      Author: luiza
 */
 
 #include <stdio.h>
