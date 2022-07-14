@@ -20,7 +20,7 @@ static void print_matrix(const char *const name, const Matrix m) {
 
 int main(int argc, char **argv) {
     
-    
+    printf("Main da Matriz\n");
     Matrix a = matrix_rand(2,1);
     print_matrix("A",a); 
     
@@ -64,6 +64,7 @@ int main(int argc, char **argv) {
     Matrix f = matrix_rand(3,3);
     print_matrix("F",f);
     
+    printf("Main da Integral\n");
     double det = matrix_det(f);
     printf("Determinante de F: %f\n",det);
     
