@@ -1,11 +1,12 @@
 /*
-	Created on: 29 de jun. de 2022
- *      Author: luiza
+	main.c: Matrix test program
+	author:luiza Paula Moreira Leão
+	date: july, 2022
 */
 
 #include <stdio.h>
 #include "matrix.h"
-
+#include "integral.h"
 static void print_matrix(const char *const name, const Matrix m) {
 	printf("%s(%u,%u) = [\n", name, m.nlins, m.ncols);
 	for(int i = 0; i < matrix_nlins(m); i++) {
@@ -18,9 +19,13 @@ static void print_matrix(const char *const name, const Matrix m) {
 	puts("]");
 }
 
+double potencia(double b){
+	return b*b;
+}
+
 int main(int argc, char **argv) {
     
-    printf("Main da Matriz\n");
+    printf("Main da Matrix\n");
     Matrix a = matrix_rand(2,1);
     print_matrix("A",a); 
     
@@ -64,10 +69,22 @@ int main(int argc, char **argv) {
     Matrix f = matrix_rand(3,3);
     print_matrix("F",f);
     
-    printf("Main da Integral\n");
     double det = matrix_det(f);
     printf("Determinante de F: %f\n",det);
     
+    printf("Main da Integral\n");
+    
+    FX_ *ptrPow = potencia;
 
-	return 0;
+
+double s = 0 ;
+for( float i  = 1; i < 5 ; i+= 1){
+    s+= integral_trapezioSimples(i, i+1,ptrPow );
+}
+double s2 = integral_Trapezio( 0,  5 ,  ptrPow);
+
+printf("%f %.1f" , s,s2);
+
+return 0 ;
+
 }
