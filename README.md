@@ -9,4 +9,4 @@ execulte os seguintes comandos :
 ## execução
 Para execultar, vá para o diretorio do projeto e execultevo comando:
 - make -f Makefile
-- -- e seja feliz ou não!!
+- e seja feliz ou não!!
